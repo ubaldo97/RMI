@@ -28,6 +28,7 @@ public class ObjetoRemoto extends UnicastRemoteObject implements RMIOpciones {
 
     @Override
     public void registrarP(String a, String b, String c) throws RemoteException {
+        cont =0;
         if((!a.equals(""))&& (!b.equals(""))&& (!c.equals(""))){
             if(lista.size()==0){
         Persona p = new Persona(a,b,c); 
@@ -56,6 +57,7 @@ public class ObjetoRemoto extends UnicastRemoteObject implements RMIOpciones {
 
     @Override
     public void registrarD(String a, String b, String c,int n, ArrayList arr) throws RemoteException {
+        cont2=0;
              if((!a.equals(""))&& (!b.equals(""))&& (!c.equals(""))&& (n != 0)&& (arr.size()>0)){
             if(lista2.size()==0){
                 Docente d = new Docente(a,b,c,n,arr); 

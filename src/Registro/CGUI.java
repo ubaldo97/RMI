@@ -256,7 +256,7 @@ ArrayList<Docente> res2 = new ArrayList();
                         for(int j=0;j<res2.get(i).getMaterias().size();j++){
                             materias = materias + res2.get(i).getMaterias().get(j)+"\n";
                         }
-                     cadena = cadena + res2.get(i).getNombre() + "," + res2.get(i).getApellido()+","+ res2.get(i).getCurp() +","+ res2.get(i).nEmpleado+"\n"+"Materias:\n"+materias+"\n";
+                     cadena = cadena +"Nombre: "+ res2.get(i).getNombre() + ", " +"Apellido: "+ res2.get(i).getApellido()+", "+"CURP: "+ res2.get(i).getCurp() +", "+"No.Empleado: "+ res2.get(i).nEmpleado+"\n"+"Materias:\n"+materias+"\n";
                     }
                     JOptionPane.showMessageDialog(null, cadena);
                 }
