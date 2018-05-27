@@ -70,7 +70,7 @@ public class ObjetoRemoto extends UnicastRemoteObject implements RMIOpciones {
                     }                 
                 }
                 if(cont2>0){
-                       JOptionPane.showMessageDialog(null, "CURP ya existe intente de nuevo!", "ERROR", JOptionPane.ERROR_MESSAGE);
+                       JOptionPane.showMessageDialog(null, "CURP/No.Empleado ya existe intente de nuevo!", "ERROR", JOptionPane.ERROR_MESSAGE);
                 }else{
                      Docente d = new Docente(a,b,c,n,arr); 
                      lista2.add(d);
