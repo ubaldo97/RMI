@@ -40,7 +40,7 @@ public class ObjetoRemoto extends UnicastRemoteObject implements RMIOpciones {
                     }                 
                 }
                 if(cont>0){
-                     JOptionPane.showMessageDialog(null, "CURP ya existe!");
+                     JOptionPane.showMessageDialog(null, "CURP ya existe intente de nuevo!", "ERROR", JOptionPane.ERROR_MESSAGE);
                 }else{
                     Persona p = new Persona(a,b,c); 
                     lista.add(p);
@@ -49,7 +49,7 @@ public class ObjetoRemoto extends UnicastRemoteObject implements RMIOpciones {
             }
         }
         else{
-            JOptionPane.showMessageDialog(null, "Todos los campos son requeridos");
+            JOptionPane.showMessageDialog(null, "Todos los campos son requeridos", "ERROR", JOptionPane.ERROR_MESSAGE);
         }
         
     }
@@ -68,7 +68,7 @@ public class ObjetoRemoto extends UnicastRemoteObject implements RMIOpciones {
                     }                 
                 }
                 if(cont2>0){
-                     JOptionPane.showMessageDialog(null, "CURP o Numero de empleado ya existe!");
+                       JOptionPane.showMessageDialog(null, "CURP ya existe intente de nuevo!", "ERROR", JOptionPane.ERROR_MESSAGE);
                 }else{
                      Docente d = new Docente(a,b,c,n,arr); 
                      lista2.add(d);
@@ -77,7 +77,7 @@ public class ObjetoRemoto extends UnicastRemoteObject implements RMIOpciones {
             }
         }
         else{
-            JOptionPane.showMessageDialog(null, "Todos los campos son requeridos");
+            JOptionPane.showMessageDialog(null, "Todos los campos son requeridos", "ERROR", JOptionPane.ERROR_MESSAGE);
         }
     
     }

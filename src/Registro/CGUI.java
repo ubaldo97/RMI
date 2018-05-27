@@ -13,6 +13,7 @@ import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import static javax.swing.JOptionPane.ERROR_MESSAGE;
 
 /**
  *
@@ -220,12 +221,13 @@ ArrayList<Docente> res2 = new ArrayList();
                 if(res1.size()>0){
                     String cadena = "";
                     for(int i=0;i<res1.size();i++){
-                     cadena = cadena + res1.get(i).getNombre() + "," + res1.get(i).getApellido()+","+ res1.get(i).getCurp()+"\n";
+                     cadena = cadena +"Nombre: "+ res1.get(i).getNombre() + ", " +"Apellido: "+ res1.get(i).getApellido()+", "+"CURP: "+ res1.get(i).getCurp()+"\n";
                     }
                     JOptionPane.showMessageDialog(null, cadena);
+                 
                 }
                 else{
-                    JOptionPane.showMessageDialog(null, "No existen registros");
+                   JOptionPane.showMessageDialog(null, "No existen registros", "Advertencia", JOptionPane.WARNING_MESSAGE);
                 }
                 
             }catch(RemoteException re){
@@ -259,7 +261,7 @@ ArrayList<Docente> res2 = new ArrayList();
                     JOptionPane.showMessageDialog(null, cadena);
                 }
                 else{
-                    JOptionPane.showMessageDialog(null, "No existen registros");
+                    JOptionPane.showMessageDialog(null, "No existen registros", "Advertencia", JOptionPane.WARNING_MESSAGE);
                 }
                 
             }catch(RemoteException re){
